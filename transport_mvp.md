@@ -44,7 +44,6 @@ A web application that instantly compares transportation options across all mode
 #### Technology Stack
 - **Frontend**: React web application (responsive design)
 - **Backend**: Python (Flask/FastAPI) API server
-- **Database**: PostgreSQL for historical pricing patterns and route caching
 - **APIs**: Google Maps Platform, MTA real-time feeds
 - **Hosting**: Cloud deployment (Vercel/Netlify + Railway/Render)
 
