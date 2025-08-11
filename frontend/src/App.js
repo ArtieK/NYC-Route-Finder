@@ -6,6 +6,9 @@ import './App.css';
 import Home from './pages/Home';
 import Results from './pages/Results';
 
+// Development Components
+import ApiTest from './components/ApiTest';
+
 function App() {
   return (
     <Router>
@@ -13,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/results" element={<Results />} />
+          <Route path="/test" element={<ApiTest />} />
         </Routes>
       </div>
     </Router>
