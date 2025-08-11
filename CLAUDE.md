@@ -5,7 +5,7 @@ You are helping build the NYC Transportation Optimizer MVP as described in `tran
 
 ## Code Development Guidelines
 
-### Explanation Requirements
+### Explanation Requirements:
 For each file you create or modify:
 1. **Purpose & Role**: Explain what this specific file does in the overall application architecture
 2. **Folder Structure Reasoning**: Why this file belongs in its specific directory and how it fits the project organization
@@ -32,6 +32,8 @@ For each file you create or modify:
 - Highlight potential challenges and how your implementation addresses them
 - Suggest improvements or alternative approaches when relevant
 - Point out MVP limitations and how they might be addressed in future iterations
+- After creating a file, you MUST ensure that all my questions are answered before writing any more code
+- After each file creation, you MUST output the details in the Explanation Requirements section
 
 ### Project Analysis Protocol
 Before writing any new code:
