@@ -1,0 +1,399 @@
+/* Transit Results Styling */
+
+.transit-results {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.transit-header h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #1f2937;
+}
+
+.provider {
+  background: #3b82f6;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Unavailable/Error States */
+.transit-results.unavailable,
+.transit-results.error {
+  background: #f9fafb;
+  border: 1px dashed #d1d5db;
+}
+
+.unavailable-message,
+.error-message {
+  color: #6b7280;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.error-message {
+  color: #dc2626;
+}
+
+/* Routes Container */
+.routes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.no-routes {
+  text-align: center;
+  color: #6b7280;
+  padding: 40px;
+  margin: 0;
+}
+
+/* Individual Route */
+.transit-route {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.transit-route:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+/* Route Header */
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.route-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.route-number {
+  background: #3b82f6;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.route-title h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.route-fare {
+  background: #10b981;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Route Stats */
+.route-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+.stat-icon {
+  font-size: 18px;
+}
+
+.stat-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Transit Lines */
+.transit-lines {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.lines-label {
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.transit-line-badge {
+  background: #1f2937;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  border: 2px solid #374151;
+}
+
+/* Route Timing */
+.route-timing {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.timing-separator {
+  color: #9ca3af;
+  font-size: 18px;
+}
+
+/* Fare Details */
+.fare-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.fare-type {
+  font-weight: 600;
+  color: #065f46;
+  font-size: 14px;
+}
+
+.fare-note {
+  font-size: 12px;
+  color: #047857;
+}
+
+/* Route Steps */
+.route-steps {
+  margin-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.route-steps summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #3b82f6;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.route-steps summary:hover {
+  background: #eff6ff;
+}
+
+.steps-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Transit Step */
+.transit-step {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f9fafb;
+  border-left: 4px solid #d1d5db;
+}
+
+.transit-step.mode-transit {
+  background: #eff6ff;
+  border-left-color: #3b82f6;
+}
+
+.transit-step.mode-walking {
+  background: #f0fdf4;
+  border-left-color: #10b981;
+}
+
+.step-number {
+  background: #6b7280;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.step-icon {
+  font-size: 20px;
+}
+
+.step-mode {
+  font-weight: 600;
+  color: #374151;
+  text-transform: capitalize;
+}
+
+.step-duration {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.step-distance {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Transit Details */
+.transit-details {
+  margin-top: 8px;
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+}
+
+.transit-line {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.transit-line strong {
+  color: #1f2937;
+}
+
+.headsign {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.transit-stops {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.stop {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stop-label {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.stop-name {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.stop-info {
+  padding: 4px 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+/* Step Instructions */
+.step-instructions {
+  margin-top: 8px;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transit-results {
+    padding: 16px;
+  }
+
+  .route-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .route-stats {
+    gap: 8px;
+  }
+
+  .stat {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .route-timing {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .transit-stops {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
