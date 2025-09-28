@@ -159,6 +159,47 @@ export const transportationAPI = {
         userMessage: 'Connection to backend services failed.'
       };
     }
+  },
+
+  // Get detailed public transit routes
+  getTransitRoutes: async (origin, destination, departureTime = 'now') => {
+    try {
+      const response = await api.get('/transit', {
+        params: {
+          origin: origin.trim(),
+          destination: destination.trim(),
+          departure_time: departureTime
+        }
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching transit routes:', error);
+      throw {
+        ...error,
+        context: 'transit_routes',
+        userMessage: error.userMessage || 'Unable to find public transit routes. Please try again.'
+      };
+    }
+  },
+
+  // Get simplified transit summary for quick comparison
+  getTransitSummary: async (origin, destination) => {
+    try {
+      const response = await api.get('/transit/summary', {
+        params: {
+          origin: origin.trim(),
+          destination: destination.trim()
+        }
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching transit summary:', error);
+      throw {
+        ...error,
+        context: 'transit_summary',
+        userMessage: error.userMessage || 'Unable to get transit information. Please try again.'
+      };
+    }
   }
 };
 
